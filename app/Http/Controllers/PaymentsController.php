@@ -44,10 +44,10 @@ class PaymentsController extends Controller
             File::makeDirectory(public_path('invoices'), 0777, true, true);
         }
         // para descargar
-        $pdf->download('invoice.pdf');
+       $pdf->download('invoice.pdf');
 
         //guardar
-        $pdf->save(public_path('invoices/invoce.pdf'));
+        $pdf->save(public_path('invoices/invoice.pdf'));
 
 
         return response()->json([
